@@ -18,11 +18,11 @@ export function requestArticles(){
 export default function reducer(state = initialState, action){
   switch(action.type) {
 
-    case REQUEST_ARTICLES = "_PENDING":
+    case REQUEST_ARTICLES + "_PENDING":
       return {...state, loading: true};
-    case REQUEST_ARTICLES = "_FULFILLED":
+    case REQUEST_ARTICLES + "_FULFILLED":
         return {loading: false, articles: action.payload}
-    case REQUEST_ARTICLES = "_REJECTED":
+    case REQUEST_ARTICLES + "_REJECTED":
         return {...state, loading: false} 
         
     default:
